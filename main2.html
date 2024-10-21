@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Yaumul Milad!</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #ffe6f0 0%, #ff99cc 100%);
+      color: #333;
+      text-align: center;
+    }
+    .container {
+      max-width: 500px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: white;
+      background: #ff66b2;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background: #ff3385;
+    }
+    .gif {
+      margin-top: 20px;
+      display: none;
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Yaumul Milad Echa!</h1>
+    <button onclick="showMessage()">Tekan aku dong</button>
+    <p id="message1" style="display:none;">🎉 Semoga umurnya dipanjangkan dan selalu diberkahi oleh Allah subhanahu wata 'ala 🎉</p>
+    <p id="message2" style="display:none;">🎉 Semoga urusan dunia dan akhirat echa dimudahkan 🎉</p>
+    <p id="message3" style="display:none;">🎉 Semoga echa menjadi pribadi yang lebih baik yaa 🎉</p>
+    <p id="message4" style="display:none;">🎉 Semoga echa makin hari makin cantik yaa 🎉</p>
+    <p id="message5" style="display:none;">🎉 Semoga yang echa semogakan tersemogakan 🎉</p>
+    <p id="message6" style="display:none;">🎉 Daaaaann... 🎉</p>
+    <p id="message7" style="display:none;">🎉 semoga echa mendapatkan pasangan yang echa inginkan 🎉</p>
+    <p id="message8" style="display:none;">🎉 Aamiin~ 🎉</p>
+    <p id="message9" style="display:none;">🎉 Makasih yaa udh mau buka hadiah digital akuu :) 🎉</p>
+    <img id="gif" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHcycXV4dTlzNjQ0bDFsZ2pvOGZidXE4dmZ4dmhycnRyd3hzOWFieiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QY8tzLK9mWNVWM3Xj5/giphy.webp" alt="Birthday GIF" class="gif">
+  </div>
+  <script>
+    let messageIndex = 0;
+    const messages = ['message1', 'message2', 'message3', 'message4', 'message5', 'message6', 'message7', 'message8', 'message9'];
+
+    function showMessage() {
+      messages.forEach(id => document.getElementById(id).style.display = 'none');
+      document.getElementById(messages[messageIndex]).style.display = 'block';
+      document.getElementById('gif').style.display = 'block';
+      messageIndex = (messageIndex + 1) % messages.length;
+    }
+  </script>
+</body>
+</html>
